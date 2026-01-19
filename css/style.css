@@ -623,3 +623,101 @@ body {
     font-size: 28px;
   }
 }
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+position: relative;
+padding: 100px 20px;
+background: radial-gradient(
+circle at center,
+#2b0a4f 0%,
+#12001f 70%
+);
+overflow: hidden;
+}
+
+/* Wave background left & right */
+.footer::before,
+.footer::after {
+content: "";
+position: absolute;
+top: 50%;
+width: 40%;
+height: 200px;
+background-image: url("../assets/footer-bg.png");
+background-repeat: no-repeat;
+background-size: contain;
+transform: translateY(-50%);
+opacity: 0.5;
+}
+
+.footer::before {
+left: -10%;
+}
+
+.footer::after {
+right: -10%;
+transform: translateY(-50%) scaleX(-1);
+}
+
+/* Content */
+.footer-content {
+position: relative;
+z-index: 2;
+text-align: center;
+}
+
+/* Logo */
+.footer-logo {
+font-size: 42px;
+font-weight: 800;
+margin-bottom: 30px;
+}
+
+.footer-logo span {
+color: #ff3bd4;
+}
+
+/* Platforms */
+.footer-platforms {
+display: flex;
+justify-content: center;
+gap: 28px;
+flex-wrap: wrap;
+margin-bottom: 30px;
+}
+
+.footer-platforms a {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 14px;
+opacity: 0.85;
+text-decoration: none;
+color: #fff;
+}
+
+.footer-platforms img {
+width: 16px;
+}
+
+/* Copyright */
+.footer-copy {
+font-size: 13px;
+opacity: 0.6;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+.footer-logo {
+font-size: 32px;
+}
+
+.footer::before,
+.footer::after {
+width: 60%;
+opacity: 0.3;
+}
+}
