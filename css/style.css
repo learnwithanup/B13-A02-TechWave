@@ -59,8 +59,7 @@ body {
   width: 28px;
 }
 
-
-/* ================= BANNER SECTION ================= */
+/* ================= HERO ================= */
 
 .hero {
   position: relative;
@@ -73,13 +72,20 @@ body {
   overflow: hidden;
 }
 
-/* Waveform background */
+/* Waveform (hero-bg.png) */
 .hero-wave {
   position: absolute;
-  inset: 0;
-  background: url("/B13-A02-TechWave/assets/hero-bg.png") center center no-repeat;
-  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 180px;
+  transform: translateY(-50%);
+  background-image: url("../assets/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   z-index: 1;
+  pointer-events: none;
 }
 
 /* Content */
@@ -94,12 +100,11 @@ body {
   text-align: center;
 }
 
-/* Circle wrapper */
+/* Circle + badge */
 .hero-circle-wrapper {
   position: relative;
 }
 
-/* Gradient circle */
 .hero-circle {
   width: 300px;
   height: 300px;
@@ -111,12 +116,10 @@ body {
   box-shadow: 0 0 60px rgba(255, 0, 200, 0.4);
 }
 
-/* Microphone icon */
 .hero-mic {
   width: 110px;
 }
 
-/* NEW badge */
 .hero-badge {
   position: absolute;
   top: 18px;
@@ -181,7 +184,37 @@ body {
   width: 18px;
 }
 
+/* ================= BANNER STATS ================= */
+
+.banner-stats {
+  background: #1a062b;
+  padding: 60px 20px;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #2dff9a;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
 /* ================= MOBILE ================= */
+
 @media (max-width: 576px) {
   .hero {
     height: auto;
@@ -209,6 +242,11 @@ body {
   .hero-buttons a {
     justify-content: center;
   }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 /* ================= ABOUT ================= */
@@ -235,4 +273,83 @@ body {
   line-height: 1.8;
   opacity: 0.85;
   margin-bottom: 20px;
+}
+
+
+/* ================= WHY CHOOSE ================= */
+
+.why-choose {
+  padding: 120px 20px;
+  background: #12001f;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* GRID WITH AREAS */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "premium mobile"
+    "premium global"
+    "exclusive resources";
+  gap: 30px;
+}
+
+/* CARD BASE */
+.why-card {
+  background: #2a0a4a;
+  padding: 30px;
+  border-radius: 22px;
+}
+
+.why-card img {
+  width: 36px;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* GRID AREA ASSIGNMENTS */
+.premium   { grid-area: premium; }
+.mobile    { grid-area: mobile; }
+.global    { grid-area: global; }
+.exclusive { grid-area: exclusive; }
+.resources { grid-area: resources; }
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "premium"
+      "mobile"
+      "global"
+      "exclusive"
+      "resources";
+  }
+
+  .why-title {
+    font-size: 28px;
+  }
 }
