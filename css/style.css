@@ -531,3 +531,95 @@ body {
     font-size: 28px;
   }
 }
+
+/* ================= MEET THE HOST ================= */
+
+.host {
+  padding: 120px 20px;
+  background: #12001f;
+}
+
+.host-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.host-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* Host Card */
+.host-card {
+  background: #2a0a4a;
+  border-radius: 28px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Image */
+.host-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Content */
+.host-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.host-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.host-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.host-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #3a1463;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.host-socials img {
+  width: 16px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .host-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .host-content p {
+    max-width: 100%;
+  }
+
+  .host-socials {
+    justify-content: center;
+  }
+
+  .host-title {
+    font-size: 28px;
+  }
+}
