@@ -60,7 +60,7 @@ body {
 }
 
 
-/* ================= HERO ================= */
+/* ================= BANNER SECTION ================= */
 
 .hero {
   position: relative;
@@ -209,4 +209,30 @@ body {
   .hero-buttons a {
     justify-content: center;
   }
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 100px 20px 80px;
+  background: #12001f;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 20px;
 }
