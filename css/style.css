@@ -59,3 +59,154 @@ body {
   width: 28px;
 }
 
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    #2b0a4f 0%,
+    #12001f 70%
+  );
+  overflow: hidden;
+}
+
+/* Waveform background */
+.hero-wave {
+  position: absolute;
+  inset: 0;
+  background: url("/B13-A02-TechWave/assets/hero-bg.png") center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Circle wrapper */
+.hero-circle-wrapper {
+  position: relative;
+}
+
+/* Gradient circle */
+.hero-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffcc33, #ff3bd4, #7f00ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px rgba(255, 0, 200, 0.4);
+}
+
+/* Microphone icon */
+.hero-mic {
+  width: 110px;
+}
+
+/* NEW badge */
+.hero-badge {
+  position: absolute;
+  top: 18px;
+  right: -6px;
+  background: #2dff9a;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* Text */
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  margin-top: 36px;
+}
+
+.hero-subtitle {
+  max-width: 560px;
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 14px auto 36px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-spotify {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ffcc33, #ff3bd4);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-spotify img {
+  width: 18px;
+}
+
+.btn-subscribe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #2dff9a;
+  color: #2dff9a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-subscribe img {
+  width: 18px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .hero {
+    height: auto;
+    padding: 140px 20px 100px;
+  }
+
+  .hero-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero-mic {
+    width: 90px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    justify-content: center;
+  }
+}
